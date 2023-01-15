@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Header,
   HeaderContainer,
@@ -11,7 +12,7 @@ import {
   SideNav,
   SideNavItems,
   HeaderSideNavItems,
-  Link,
+  HeaderName,
 } from "@carbon/react";
 
 import { LogoGithub, LogoLinkedin } from "@carbon/react/icons";
@@ -26,38 +27,42 @@ const NavHeader = () => (
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
-        <Link href="#">
-          <img src="/logo.svg" alt="Tex Albuja logo"></img>
-        </Link>
+        <HeaderName element={Link} to="/" prefix="">
+          <img src="logo.svg" alt="texalbuja.dev logo"></img>
+        </HeaderName>
         <HeaderNavigation aria-label="Carbon Tutorial">
-          <HeaderMenuItem href="/technical-leadership">
+          <HeaderMenuItem element={Link} to="/technical-leadership">
             Technical Leadership
           </HeaderMenuItem>
-          <HeaderMenuItem href="/software-architecture">
+          <HeaderMenuItem element={Link} to="/software-architecture">
             Software Architecture
           </HeaderMenuItem>
-          <HeaderMenuItem href="/developer-effectiveness">
+          <HeaderMenuItem element={Link} to="/developer-effectiveness">
             Developer Effectiveness
           </HeaderMenuItem>
-          <HeaderMenuItem href="/blog">Blog</HeaderMenuItem>
+          <HeaderMenuItem element={Link} to="/blog">
+            Blog
+          </HeaderMenuItem>
         </HeaderNavigation>
         <SideNav
           aria-label="Side navigation"
           expanded={isSideNavExpanded}
-          isPersistent={true}
+          isPersistent={false}
         >
           <SideNavItems>
             <HeaderSideNavItems>
-              <HeaderMenuItem href="/technical-leadership">
+              <HeaderMenuItem element={Link} to="/technical-leadership">
                 Technical Leadership
               </HeaderMenuItem>
-              <HeaderMenuItem href="/software-architecture">
+              <HeaderMenuItem element={Link} to="/software-architecture">
                 Software Architecture
               </HeaderMenuItem>
-              <HeaderMenuItem href="/developer-effectiveness">
+              <HeaderMenuItem element={Link} to="/developer-effectiveness">
                 Developer Effectiveness
               </HeaderMenuItem>
-              <HeaderMenuItem href="/blog">Blog</HeaderMenuItem>
+              <HeaderMenuItem element={Link} to="/blog">
+                Blog
+              </HeaderMenuItem>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
