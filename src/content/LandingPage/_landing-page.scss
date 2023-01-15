@@ -1,0 +1,19 @@
+@use "@carbon/react/scss/spacing" as *;
+
+.landing-page__headshot {
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 90px;
+}
+
+.landing-page__tab-content {
+  margin-top: $spacing-13;
+}
+
+.landing-page__subheading {
+  margin: $spacing-09 0 $spacing-09 0;
+}
+
+.landing-page__button {
+  margin-top: $spacing-09;
+}
