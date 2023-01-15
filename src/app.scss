@@ -1,0 +1,7 @@
+@use '@carbon/styles';
+@use '@carbon/styles/scss/grid';
+@use './components/NavHeader/nav-header';
+
+
+// Emit the flex-grid styles
+@include grid.flex-grid();
